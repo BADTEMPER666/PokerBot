@@ -34,7 +34,7 @@ module.exports =
 
         shufflePlayer(5);
 
-        shuffleO(5);
+        shuffleB(5);
 
         rankPlayer();
         
@@ -109,7 +109,7 @@ function shufflePlayer(attempts)
     }
 }
 
-function shuffleO(attempts) 
+function shuffleB(attempts) 
 {
     try
     {
@@ -122,7 +122,7 @@ function shuffleO(attempts)
             attempts--; //subtract one attempt
             var item = CardArray[Math.floor(Math.random()*CardArray.length)];
             bArray.push(item); //add item to op array
-            shuffleO(attempts); //loop function until completion
+            shuffleB(attempts); //loop function until completion
         }
     }
     catch (Exception)
