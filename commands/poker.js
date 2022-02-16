@@ -52,6 +52,15 @@ module.exports =
         )
         .setColor('BLACK');
         message.channel.send(embed);
+        if (pValue > bValue)
+        {
+            message.channel.send("Major bag alert");
+        }
+        else if (pValue < bValue)
+        {
+            message.channel.send("Major bag loss");
+        }
+        resetValues();
     }
 }
 
@@ -213,4 +222,13 @@ function oRank()
         space();
         console.log("An error occured shuffling cards, error: " + Exception);
     }
+}
+
+function resetValues()
+{
+    shuffledArray = [];
+    pArray = [];
+    bArray = [];
+    pValue = 0;
+    bValue = 0;
 }
